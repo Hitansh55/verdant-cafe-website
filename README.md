@@ -1,6 +1,6 @@
 # Verdant Cafe | Luxury Landing Page & 3D Menu
 
-![Verdant Cafe Banner](public/hero_matcha.png)
+
 
 A highly interactive, ultra-premium landing page built for a luxury specialty coffee and matcha cafe. Designed with modern aesthetics, cinematic photography, and buttery smooth animations.
 

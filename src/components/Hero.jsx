@@ -23,8 +23,8 @@ const Hero = () => {
           alt="Luxury Iced Matcha Latte" 
           className="w-full h-full object-cover object-[70%_30%] scale-110 opacity-90"
         />
-        {/* Subtle gradient overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-cream/10" />
+        {/* Darker gradient overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </motion.div>
 
       {/* Floating Statistics */}
@@ -67,7 +67,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif text-6xl sm:text-8xl md:text-[12rem] text-white tracking-tighter leading-none mb-6 drop-shadow-2xl"
+          className="font-serif font-bold text-7xl sm:text-9xl md:text-[14rem] text-white tracking-tighter leading-none mb-4 drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
         >
           Verdant
         </motion.h1>
@@ -79,10 +79,10 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="max-w-xl mx-auto"
         >
-          <h2 className="text-xl md:text-2xl text-white/90 font-medium tracking-wide mb-4 uppercase">
+          <h2 className="text-xl md:text-3xl text-white font-semibold tracking-wide mb-4 uppercase drop-shadow-lg">
             Crafted One Cup At A Time
           </h2>
-          <p className="text-white/80 text-base md:text-lg mb-10 font-light leading-relaxed">
+          <p className="text-white/90 text-base md:text-xl mb-10 font-medium leading-relaxed drop-shadow-md">
             Experience ceremonial-grade matcha and handcrafted beverages made with precision, passion, and locally sourced ingredients.
           </p>
         </motion.div>
@@ -103,9 +103,10 @@ const Hero = () => {
           </motion.button>
           
           <motion.button 
+            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-full font-medium tracking-wide hover:bg-white/20 transition-colors"
+            className="px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/30 rounded-full font-bold tracking-wide hover:bg-white/20 transition-colors shadow-lg"
           >
             Explore Menu
           </motion.button>

@@ -25,10 +25,10 @@ const Navigation = () => {
             <span className="text-sm tracking-wide hidden md:block">Menu</span>
           </button>
           <div className="hidden lg:flex items-center gap-6 text-sm font-medium tracking-wide">
-            <a href="#" className="hover:text-primary-green transition-colors">Our Story</a>
-            <a href="#" className="hover:text-primary-green transition-colors">Shop</a>
-            <a href="#" className="hover:text-primary-green transition-colors">Contact</a>
-          </div>
+            <button onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })} className="hover:text-primary-green transition-colors cursor-pointer">Our Story</button>
+          <button onClick={() => window.scrollTo({ top: document.body.scrollHeight / 2, behavior: 'smooth' })} className="hover:text-primary-green transition-colors cursor-pointer">Shop</button>
+          <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })} className="hover:text-primary-green transition-colors cursor-pointer">Contact</button>
+        </div>
         </div>
 
         <div className="absolute left-1/2 -translate-x-1/2">
@@ -74,22 +74,22 @@ const Navigation = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-col items-center gap-8 font-serif text-4xl md:text-6xl tracking-tight"
             >
-              <a href="#" onClick={() => setIsOpen(false)} className="hover:text-primary-green transition-colors relative group">
+              <button onClick={() => { setIsOpen(false); window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }); }} className="hover:text-primary-green transition-colors relative group cursor-pointer">
                 Menu Book
                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-primary-green transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a href="#" onClick={() => setIsOpen(false)} className="hover:text-primary-green transition-colors relative group">
+              </button>
+              <button onClick={() => { setIsOpen(false); window.scrollTo({ top: window.innerHeight * 2, behavior: 'smooth' }); }} className="hover:text-primary-green transition-colors relative group cursor-pointer">
                 Our Story
                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-primary-green transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a href="#" onClick={() => setIsOpen(false)} className="hover:text-primary-green transition-colors relative group">
+              </button>
+              <button onClick={() => { setIsOpen(false); window.scrollTo({ top: window.innerHeight * 3, behavior: 'smooth' }); }} className="hover:text-primary-green transition-colors relative group cursor-pointer">
                 Shop Merch
                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-primary-green transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a href="#" onClick={() => setIsOpen(false)} className="hover:text-primary-green transition-colors relative group">
+              </button>
+              <button onClick={() => { setIsOpen(false); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }} className="hover:text-primary-green transition-colors relative group cursor-pointer">
                 Contact
                 <span className="absolute -bottom-2 left-0 w-0 h-1 bg-primary-green transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </button>
             </motion.div>
           </motion.div>
         )}
